@@ -77,3 +77,12 @@ for (let task of arrOfTasks) {
     task['totalTime'] = (task.finishedAt - task.startedAt) / 3600000 + ' hours';
     task['tasksFinishedPrecent'] = Math.floor(((task.tasksFinished / task.tasksGiven) *100)) + '%';
 }
+document.write(`<table>`);
+for (let task of arrOfTasks) {
+    document.write(`<tr>`);
+    for (let value in task) {
+        document.write(`<td>${task[value]}</td>`);
+    }
+    document.write(`</tr>`);
+}
+document.write(`</table>`);
