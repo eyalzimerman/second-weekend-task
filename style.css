@@ -1,3 +1,28 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+table{
+    text-align: center;
+    font-weight: 500;
+    
+}
+th{
+    background-color: rgb(97, 88, 88);
+    padding: 15px;
+    border-radius: 7px;
+}
+td{
+    background-color: rgb(187, 155, 155);
+    padding: 15px;
+    border-radius: 7px;
+}
+
+/* styling the properties of totalTime */
+
 .total-time-good{
     background-color: rgb(34, 206, 34);    
 }
@@ -7,6 +32,9 @@
 .total-time-bad{
     background-color: rgb(231, 6, 6);
 }
+
+/* styling the properties of tasksFinishedPrecent */
+
 .low-precent{
     background-color: rgb(154, 195, 207);
 }
