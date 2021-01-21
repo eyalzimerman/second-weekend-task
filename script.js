@@ -29,10 +29,10 @@ let task4 = {
     topic: 'CSS'
 };
 let task5 = {
-    startedAt: new Date("2021-01-20:10:00"),
+    startedAt: new Date("2021-01-20:10:30"),
     finishedAt: new Date("2021-01-20:14:00"),
     tasksGiven: 18,
-    tasksFinished: 16,
+    tasksFinished: 6,
     topic: 'Arrays'
 };
 let task6 = {
@@ -46,14 +46,14 @@ let task7 = {
     startedAt: new Date("2021-01-20:14:00"),
     finishedAt: new Date("2021-01-20:20:00"),
     tasksGiven: 30,
-    tasksFinished: 15,
+    tasksFinished: 13,
     topic: 'Basketball'
 };
 let task8 = {
-    startedAt: new Date("2021-01-20:13:00"),
+    startedAt: new Date("2021-01-20:13:30"),
     finishedAt: new Date("2021-01-20:17:00"),
     tasksGiven: 23,
-    tasksFinished: 22,
+    tasksFinished: 3,
     topic: 'Tennis'
 };
 let task9 = {
@@ -71,3 +71,9 @@ let task10 = {
     topic: 'Surfing'
 };
 let arrOfTasks = [task1, task2, task3, task4, task5, task6, task7, task8, task9, task10];
+
+//Calculate and add total time of work and finished precent properties to each object
+for (let task of arrOfTasks) {
+    task['totalTime'] = (task.finishedAt - task.startedAt) / 3600000 + ' hours';
+    task['tasksFinishedPrecent'] = Math.floor(((task.tasksFinished / task.tasksGiven) *100)) + '%';
+}
