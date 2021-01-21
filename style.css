@@ -1,0 +1,9 @@
+.total-time-good{
+    background-color: rgb(34, 206, 34);    
+}
+.total-time-avg{
+    background-color: rgb(226, 158, 32);
+}
+.total-time-bad{
+    background-color: rgb(231, 6, 6);
+}
