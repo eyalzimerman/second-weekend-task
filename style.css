@@ -7,3 +7,12 @@
 .total-time-bad{
     background-color: rgb(231, 6, 6);
 }
+.low-precent{
+    background-color: rgb(154, 195, 207);
+}
+.avg-precent{
+    background-color: rgb(87, 87, 190);
+}
+.high-precent{
+    background-color: rgb(29, 29, 143);
+}
