@@ -76,6 +76,8 @@ let arrOfTasks = [task1, task2, task3, task4, task5, task6, task7, task8, task9,
 for (let task of arrOfTasks) {
     task['totalTime'] = (task.finishedAt - task.startedAt) / 3600000 + ' hours';
     task['tasksFinishedPrecent'] = Math.floor(((task.tasksFinished / task.tasksGiven) *100)) + '%';
+    task.startedAt = task.startedAt.toLocaleTimeString(); //saved only the local time
+    task.finishedAt = task.finishedAt.toLocaleTimeString(); //saved only the local time
 }
 let arrOfHeaderTable =  ['Started At', 'Finished At', 'Ttasks Given', 'Tasks Finished', 'Topic', 'Total Time', 'Tasks Finished Precent'];
 document.write(`<table>`);
