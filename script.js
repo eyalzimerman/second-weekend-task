@@ -77,7 +77,13 @@ for (let task of arrOfTasks) {
     task['totalTime'] = (task.finishedAt - task.startedAt) / 3600000 + ' hours';
     task['tasksFinishedPrecent'] = Math.floor(((task.tasksFinished / task.tasksGiven) *100)) + '%';
 }
+let arrOfHeaderTable =  ['Started At', 'Finished At', 'Ttasks Given', 'Tasks Finished', 'Topic', 'Total Time', 'Tasks Finished Precent'];
 document.write(`<table>`);
+document.write(`<tr>`);
+for (let head of arrOfHeaderTable) {
+    document.write(`<th>${head}</th>`)
+}
+document.write(`</tr>`);
 for (let task of arrOfTasks) {
     document.write(`<tr>`);
     for (let value in task) {
