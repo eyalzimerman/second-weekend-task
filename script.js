@@ -83,7 +83,7 @@ let arrOfHeaderTable =  ['Started At', 'Finished At', 'Ttasks Given', 'Tasks Fin
 document.write(`<table>`);
 document.write(`<tr>`);
 for (let head of arrOfHeaderTable) {
-    document.write(`<th>${head}</th>`)
+    document.write(`<th>${head}</th>`);
 }
 document.write(`</tr>`);
 for (let task of arrOfTasks) {
