@@ -82,6 +82,7 @@ for (let task of arrOfTasks) {
     task.finishedAt = task.finishedAt.toLocaleTimeString(); //saved only the local time
 }
 
+
 //for loop to change the places of the keys
 for (let i = 0; i < arrOfTasks.length; i++) {
     arrOfTasks[i] = {
