@@ -70,6 +70,7 @@ let task10 = {
     tasksFinished: 12,
     topic: 'Surfing'
 };
+
 //array of tasks, all tasks are objects
 let arrOfTasks = [task1, task2, task3, task4, task5, task6, task7, task8, task9, task10];
 
@@ -81,8 +82,21 @@ for (let task of arrOfTasks) {
     task.finishedAt = task.finishedAt.toLocaleTimeString(); //saved only the local time
 }
 
+//for loop to change the places of the keys
+for (let i = 0; i < arrOfTasks.length; i++) {
+    arrOfTasks[i] = {
+        startedAt: arrOfTasks[i].startedAt,
+        finishedAt: arrOfTasks[i].finishedAt,
+        totalTime: arrOfTasks[i].totalTime, 
+        tasksGiven: arrOfTasks[i].tasksGiven,
+        tasksFinished: arrOfTasks[i].tasksFinished,
+        tasksFinishedPrecent: arrOfTasks[i].tasksFinishedPrecent,
+        topic: arrOfTasks[i].topic
+    };
+}
+
 // add array of headers to the table
-let arrOfHeaderTable =  ['Started At', 'Finished At', 'Ttasks Given', 'Tasks Finished', 'Topic', 'Total Time', 'Tasks Finished Precent'];
+let arrOfHeaderTable =  ['Started At', 'Finished At', 'Total Time', 'Ttasks Given', 'Tasks Finished', 'Tasks Finished Precent', 'Topic'];
 document.write(`<table>`);
 
 // for loop to create the headers of the table
@@ -90,9 +104,10 @@ document.write(`<tr>`);
 for (let head of arrOfHeaderTable) {
     document.write(`<th>${head}</th>`);
 }
+document.write(`</tr>`);
+
 //create the table body and put all the same property value in same row
 //check if the property is totalTime and tasksFinishedPrecent to give them a class by the value
-document.write(`</tr>`);
 for (let tasks of arrOfTasks) {
     document.write(`<tr>`);
     for (let prop in tasks) {
