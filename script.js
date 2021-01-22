@@ -97,6 +97,7 @@ for (let i = 0; i < arrOfTasks.length; i++) {
 
 // add array of headers to the table
 let arrOfHeaderTable =  ['Started At', 'Finished At', 'Total Time', 'Ttasks Given', 'Tasks Finished', 'Tasks Finished Precent', 'Topic'];
+
 document.write(`<table>`);
 
 // for loop to create the headers of the table
@@ -138,7 +139,7 @@ for (let tasks of arrOfTasks) {
                 let className = 'high-precent';
                 document.write(`<td class="${className}">${tasks[prop] + '%'}</td>`);
             }
-            
+
         } else {
             document.write(`<td>${tasks[prop]}</td>`);
         }
