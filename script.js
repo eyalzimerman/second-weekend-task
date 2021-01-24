@@ -100,7 +100,7 @@ for (let i = 0; i < arrOfTasks.length; i++) {
 let arrOfHeaderTable =  ['Started At', 'Finished At', 'Total Time', 'Ttasks Given', 'Tasks Finished', 'Tasks Finished Precent', 'Topic'];
 
 let table = document.createElement('table');
-document.body.append(table)
+document.body.append(table);
 // for loop to create the headers of the table
 let trHeader = document.createElement('tr');
 table.append(trHeader);
