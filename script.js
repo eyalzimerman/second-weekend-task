@@ -99,14 +99,17 @@ for (let i = 0; i < arrOfTasks.length; i++) {
 // add array of headers to the table
 let arrOfHeaderTable =  ['Started At', 'Finished At', 'Total Time', 'Ttasks Given', 'Tasks Finished', 'Tasks Finished Precent', 'Topic'];
 
-document.write(`<table>`);
-
+let table = document.createElement('table');
+document.body.append(table)
 // for loop to create the headers of the table
-document.write(`<tr>`);
+let trHeader = document.createElement('tr');
+table.append(trHeader);
 for (let head of arrOfHeaderTable) {
-    document.write(`<th>${head}</th>`);
+    let th = document.createElement('th');
+    trHeader.append(th);
+    th.textContent = head;
 }
-document.write(`</tr>`);
+
 
 //create the table body and put all the same property value in same row
 //check if the property is totalTime and tasksFinishedPrecent to give them a class by the value
@@ -147,4 +150,3 @@ for (let tasks of arrOfTasks) {
     }
     document.write(`</tr>`);
 }
-document.write(`</table>`);
