@@ -114,39 +114,41 @@ for (let head of arrOfHeaderTable) {
 //create the table body and put all the same property value in same row
 //check if the property is totalTime and tasksFinishedPrecent to give them a class by the value
 for (let tasks of arrOfTasks) {
-    document.write(`<tr>`);
+    let trTable = document.createElement('tr');
+    table.append(trTable);
     for (let prop in tasks) {
+        let tdTable = document.createElement('td');
+        trTable.append(tdTable);
         if (prop === 'totalTime') {                //check the value of totalTime
             if (tasks[prop] <= 2) {
-                let className = 'total-time-good';
-                document.write(`<td class="${className}">${tasks[prop]}</td>`);
+                tdTable.textContent = `${tasks[prop]}`;
+                tdTable.classList.add("total-time-good");
             }
             if (tasks[prop] > 2 && tasks[prop] <= 5) {
-                let className = 'total-time-avg';
-                document.write(`<td class="${className}">${tasks[prop]}</td>`);
+                tdTable.textContent = `${tasks[prop]}`;
+                tdTable.classList.add("total-time-avg");
             }
             if (tasks[prop] > 5) {
-                let className = 'total-time-bad';
-                document.write(`<td class="${className}">${tasks[prop]}</td>`);
+                tdTable.textContent = `${tasks[prop]}`;
+                tdTable.classList.add("total-time-bad");
             }
 
-        } else if (prop === 'tasksFinishedPrecent') {                               //check the value of tasksFinishedPrecent
+        } else if (prop === 'tasksFinishedPrecent') {                         //check the value of tasksFinishedPrecent
             if (tasks[prop] <= 50) {
-                let className = 'low-precent';
-                document.write(`<td class="${className}">${tasks[prop] + '%'}</td>`);
+                tdTable.textContent = `${tasks[prop] + '%'}`;
+                tdTable.classList.add("low-precent");
             }
             if (tasks[prop] > 50 && tasks[prop] <= 75) {
-                let className = 'avg-precent';
-                document.write(`<td class="${className}">${tasks[prop] + '%'}</td>`);
+                tdTable.textContent = `${tasks[prop] + '%'}`;
+                tdTable.classList.add("avg-precent");
             }
             if (tasks[prop] > 75) {
-                let className = 'high-precent';
-                document.write(`<td class="${className}">${tasks[prop] + '%'}</td>`);
+                tdTable.textContent = `${tasks[prop] + '%'}`;
+                tdTable.classList.add("high-precent");
             }
 
         } else {
-            document.write(`<td>${tasks[prop]}</td>`);
+            tdTable.textContent = `${tasks[prop]}`;
         }
     }
-    document.write(`</tr>`);
 }
